@@ -6,7 +6,7 @@ pipeline {
   }
   tools {
       maven 'jenkins-maven'
-      jdk 'jdk-17'
+      jdk 'forjenkins'
   }
   stages {
     stage ('Initialize') {
