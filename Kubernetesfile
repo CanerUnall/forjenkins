@@ -42,8 +42,8 @@ pipeline {
         steps {
 
             bat 'docker build -t spring-boot-java-j2-image .'
-            bat 'kubectl apply -f deployment.yml'
-            bat 'kubectl apply -f service.yml'
+            bat 'kubectl apply -f deployment.yaml'
+            bat 'kubectl apply -f service.yaml'
         }
     }
 //     stage('Finalize') {
