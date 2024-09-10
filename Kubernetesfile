@@ -18,7 +18,7 @@ pipeline {
     }
     stage ('Stop Pods') {
         steps {
-
+            script{
             try{
                 bat 'kubectl delete -f service.yaml'
             }catch (Exception e){
@@ -30,7 +30,7 @@ pipeline {
             }catch (Exception e){
                 echo "No deployment..."
             }
-
+            }
         }
     }
     stage ('Test') {
