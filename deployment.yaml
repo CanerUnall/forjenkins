@@ -13,10 +13,10 @@ spec:
         app: spring-boot-k8s
     spec:
       containers:
-        - name: spring-boot-k8s
-          image: springboot-k8s-example:1.0
-          # Image that will be used to containers in the cluster
+        - name: spring-boot-java-h2-container
+          image: spring-boot-java-h2-image 
+# Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080
+            - containerPort: 9991 
 # The port that the container is running on in the cluster
